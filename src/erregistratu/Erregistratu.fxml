@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="TOP_CENTER" layoutX="199.0" layoutY="33.0" prefHeight="45.0" prefWidth="202.0" text="ERREGISTROA">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="252.0" layoutY="100.0" prefHeight="17.0" prefWidth="86.0" />
+      <Label layoutX="141.0" layoutY="97.0" prefHeight="17.0" prefWidth="61.0" text="Izena:" />
+      <Label layoutX="142.0" layoutY="191.0" prefHeight="25.0" prefWidth="96.0" text="Emaila:" />
+      <Label layoutX="141.0" layoutY="243.0" prefHeight="25.0" prefWidth="112.0" text="Erabiltzailea:" />
+      <Label layoutX="141.0" layoutY="302.0" prefHeight="17.0" prefWidth="61.0" text="Pasahitza:" />
+      <TextField layoutX="142.0" layoutY="116.0" prefHeight="25.0" prefWidth="309.0" promptText="Danel" />
+      <TextField layoutX="142.0" layoutY="216.0" prefHeight="25.0" prefWidth="309.0" promptText="dpenam23@fpsanturtzilh.eus" />
+      <TextField layoutX="142.0" layoutY="269.0" prefHeight="25.0" prefWidth="309.0" promptText="Ikasle1" />
+      <TextField layoutX="142.0" layoutY="323.0" prefHeight="25.0" prefWidth="309.0" promptText="Ikasle123" />
+      <Label layoutX="100.0" layoutY="224.0" prefHeight="17.0" prefWidth="61.0" />
+      <TextField layoutX="142.0" layoutY="166.0" prefHeight="25.0" prefWidth="309.0" promptText="Peña Moreno" />
+      <Label layoutX="141.0" layoutY="143.0" prefHeight="17.0" prefWidth="61.0" text="Abizena:" />
+      <TextField layoutX="142.0" layoutY="376.0" prefHeight="25.0" prefWidth="309.0" promptText="Ikasle123" />
+      <Label layoutX="141.0" layoutY="358.0" prefHeight="17.0" prefWidth="124.0" text="Errepikatu pasahitza:" />
+      <Button layoutX="324.0" layoutY="439.0" mnemonicParsing="false" text="Erregistratu" />
+      <Button layoutX="213.0" layoutY="439.0" mnemonicParsing="false" text="Itzuli" />
+   </children>
+</Pane>

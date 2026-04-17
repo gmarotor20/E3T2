@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="451.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="57.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ERABILTZAILEA SORTU" textAlignment="CENTER" wrappingWidth="336.13671875">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="80.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Izena" textAlignment="CENTER" wrappingWidth="45.13671875">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="70.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Abizena" textAlignment="CENTER" wrappingWidth="71.13671875">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="64.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pasahitza" wrappingWidth="82.13671875">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="56.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="P.Egiaztatu" wrappingWidth="99.13671875">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="70.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Emaila" textAlignment="CENTER" wrappingWidth="71.13671875">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField layoutX="155.0" layoutY="181.0" prefHeight="25.0" prefWidth="206.0" promptText="Erabiltzailea" />
+      <TextField layoutX="155.0" layoutY="206.0" prefHeight="25.0" prefWidth="206.0" promptText="Erabiltzaile Abizena" />
+      <TextField layoutX="155.0" layoutY="236.0" prefHeight="25.0" prefWidth="206.0" promptText="zureemaila@gmail.com" />
+      <Button layoutX="126.0" layoutY="390.0" mnemonicParsing="false" opacity="0.65" text="SORTU">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <PasswordField layoutX="155.0" layoutY="289.0" prefHeight="25.0" prefWidth="206.0" promptText="********" />
+      <PasswordField layoutX="155.0" layoutY="317.0" prefHeight="25.0" prefWidth="206.0" promptText="********" />
+      <ImageView fitHeight="58.0" fitWidth="71.0" layoutX="197.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Downloads/logo.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="279.0" layoutY="390.0" mnemonicParsing="false" text="EZABATU">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="197.0" layoutY="390.0" mnemonicParsing="false" text="ALDATU">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Text layoutX="80.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NAN" wrappingWidth="45.13671875">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField layoutX="155.0" layoutY="263.0" prefHeight="25.0" prefWidth="206.0" promptText="NAN" />
+   </children>
+</Pane>

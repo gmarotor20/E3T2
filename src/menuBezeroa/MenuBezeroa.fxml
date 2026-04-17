@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar layoutX="344.0" layoutY="46.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="242.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="B.Arreta">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Formularioa" />
+                  <MenuItem mnemonicParsing="false" text="Historiala" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Saskia">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Produktu Saskia" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Denda">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Produktu Denda" />
+                  <MenuItem mnemonicParsing="false" text="Azken Erosketak" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Kontua">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Datuak ikusi" />
+                  <MenuItem mnemonicParsing="false" text="Saioa Itxi" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Text layoutX="37.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MENU BEZEROA" textAlignment="CENTER" wrappingWidth="220.181640625">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Text>
+      <Button layoutX="229.0" layoutY="178.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="143.0" text="Denda">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="420.0" layoutY="178.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="143.0" text="Saskia">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="43.0" layoutY="178.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="143.0" text="Bezero Arreta">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
