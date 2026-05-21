@@ -5,63 +5,26 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inbentarioa.InbentarioaKontrolagailua">
    <children>
       <Text layoutX="-6.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INBENTARIOA" textAlignment="CENTER" wrappingWidth="255.13671875">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Text>
-      <TextField layoutX="34.0" layoutY="73.0" prefHeight="25.0" prefWidth="216.0" promptText="Bilatu (ID,Izena...)" />
-      <Text layoutX="389.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategoria :">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </Text>
-      <MenuButton layoutX="479.0" layoutY="72.0" mnemonicParsing="false" text="Aukerak">
-        <items>
-          <MenuItem mnemonicParsing="false" text="Kategoria1" />
-          <MenuItem mnemonicParsing="false" text="Kategoria2" />
-            <MenuItem mnemonicParsing="false" text="Kategoria3" />
-        </items>
-      </MenuButton>
-      <TableView layoutX="34.0" layoutY="128.0" prefHeight="196.0" prefWidth="521.0">
+      <TextField fx:id="bilatuTextField" layoutX="34.0" layoutY="73.0" prefHeight="25.0" prefWidth="216.0" promptText="Bilatu (ID,Izena...)" />
+      <TableView fx:id="tableView" layoutX="34.0" layoutY="128.0" prefHeight="196.0" prefWidth="521.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="ID" />
-          <TableColumn prefWidth="240.0" text="IZENA" />
-            <TableColumn prefWidth="108.0" text="STOCK" />
-            <TableColumn prefWidth="97.0" text="PREZIOA" />
+          <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="izenaColumn" prefWidth="240.0" text="IZENA" />
+          <TableColumn fx:id="stockColumn" prefWidth="108.0" text="STOCK" />
+          <TableColumn fx:id="prezioaColumn" prefWidth="97.0" text="PREZIOA" />
         </columns>
       </TableView>
-      <Button layoutX="229.0" layoutY="339.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="131.0" text="Produktu berria" />
-      <MenuBar layoutX="236.0" layoutY="28.0" prefHeight="25.0" prefWidth="350.0">
-         <menus>
-            <Menu mnemonicParsing="false" text="B.Kudeaketa">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Bezero bilatu" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Eskaerak">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Bezero Eskaerak" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Agenda">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Formularioa" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Inbentarioa">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="I.Lista" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Kontua">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Saioa Itxi" />
-               </items>
-            </Menu>
-         </menus>
-      </MenuBar>
+      <Button fx:id="itzuliButton" layoutX="34.0" layoutY="337.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="131.0" text="ITZULI" />
+      <Button fx:id="produktuBerriaButton" layoutX="216.0" layoutY="337.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="131.0" text="Produktu Berria" />
+      <Button fx:id="stockGehituButton" layoutX="398.0" layoutY="337.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="131.0"
+              style="-fx-background-color: #1565c0; -fx-text-fill: white; -fx-font-weight: bold;"
+              text="Stock Gehitu" />
    </children>
 </Pane>

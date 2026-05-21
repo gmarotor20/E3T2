@@ -1,71 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:controller="menuSaltzaile.MenuSaltzaileKontrolagailua"
+      maxHeight="-Infinity" maxWidth="-Infinity"
+      minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="500.0" prefWidth="600.0"
+      style="-fx-background-color: #f5f5f5;"
+      xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Text layoutX="32.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MENU - SALTZAILE" wrappingWidth="186.13671875">
-         <font>
-            <Font name="System Bold" size="20.0" />
-         </font>
+
+      <Text layoutX="234.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0"
+            textAlignment="CENTER" text="MENU - SALTZAILE" fill="#2c3e50">
+         <font><Font name="System Bold" size="20.0"/></font>
       </Text>
-      <Button layoutX="340.0" layoutY="232.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="143.0" text="Inbentarioa">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Button>
-      <Button layoutX="125.0" layoutY="130.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="143.0" text="Bezeroen Kudeaketa">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Button>
-      <Button layoutX="340.0" layoutY="130.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="143.0" text="Eskaerak">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Button>
-      <Button layoutX="125.0" layoutY="232.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="143.0" text="Agenda">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Button>
-      <MenuBar layoutX="236.0" layoutY="34.0" prefHeight="25.0" prefWidth="350.0">
+
+      <Separator layoutX="100.0" layoutY="75.0" prefWidth="400.0"/>
+
+      <MenuBar layoutX="500.0" layoutY="14.0" prefHeight="25.0" prefWidth="85.0"
+               style="-fx-background-color: #f5f5f5; -fx-border-color: #dcdde1; -fx-border-radius: 4;">
          <menus>
-            <Menu mnemonicParsing="false" text="B.Kudeaketa">
+            <Menu text="Kontua">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Bezero bilatu" />
+                  <MenuItem fx:id="saioaItximenu" onAction="#saioaItxi" text="Saioa Itxi"
+                            style="-fx-text-fill: #e74c3c;"/>
                </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Eskaerak">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Bezero Eskaerak" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Agenda">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Formularioa" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Inbentarioa">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="I.Lista" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Kontua">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Saioa Itxi" />
-              </items>
             </Menu>
          </menus>
       </MenuBar>
-      <ImageView fitHeight="38.0" fitWidth="47.0" layoutX="87.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../Downloads/vendedor.png" />
-         </image>
-      </ImageView>
+
+      <Button layoutX="225.0" layoutY="100.0" onAction="#bilatu"
+              prefHeight="45.0" prefWidth="150.0"
+              style="-fx-background-color: #ecf0f1; -fx-text-fill: #2c3e50; -fx-font-weight: bold;
+                     -fx-background-radius: 5; -fx-border-color: #bdc3c7; -fx-border-radius: 5;"
+              text="Bezeroen Kudeaketa">
+         <font><Font name="System Bold" size="12.0"/></font>
+      </Button>
+
+      <Button layoutX="225.0" layoutY="155.0" onAction="#eskaera"
+              prefHeight="45.0" prefWidth="150.0"
+              style="-fx-background-color: #ecf0f1; -fx-text-fill: #2c3e50; -fx-font-weight: bold;
+                     -fx-background-radius: 5; -fx-border-color: #bdc3c7; -fx-border-radius: 5;"
+              text="Eskaerak">
+         <font><Font name="System Bold" size="12.0"/></font>
+      </Button>
+
+      <Button layoutX="225.0" layoutY="210.0" onAction="#agenda"
+              prefHeight="45.0" prefWidth="150.0"
+              style="-fx-background-color: #ecf0f1; -fx-text-fill: #2c3e50; -fx-font-weight: bold;
+                     -fx-background-radius: 5; -fx-border-color: #bdc3c7; -fx-border-radius: 5;"
+              text="Agenda">
+         <font><Font name="System Bold" size="12.0"/></font>
+      </Button>
+
+      <Button layoutX="225.0" layoutY="265.0" onAction="#inbentario"
+              prefHeight="45.0" prefWidth="150.0"
+              style="-fx-background-color: #ecf0f1; -fx-text-fill: #2c3e50; -fx-font-weight: bold;
+                     -fx-background-radius: 5; -fx-border-color: #bdc3c7; -fx-border-radius: 5;"
+              text="Inbentarioa">
+         <font><Font name="System Bold" size="12.0"/></font>
+      </Button>
+
+      <!-- ← BOTÓN NUEVO -->
+      <Button layoutX="225.0" layoutY="320.0" onAction="#kexak"
+              prefHeight="45.0" prefWidth="150.0"
+              style="-fx-background-color: #ecf0f1; -fx-text-fill: #2c3e50; -fx-font-weight: bold;
+                     -fx-background-radius: 5; -fx-border-color: #bdc3c7; -fx-border-radius: 5;"
+              text="Kexak">
+         <font><Font name="System Bold" size="12.0"/></font>
+      </Button>
+
    </children>
 </Pane>

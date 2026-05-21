@@ -1,113 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
+<VBox spacing="15" style="-fx-background-color: #f5f5f5; -fx-padding: 20;"
+      xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="denda.DendaKontrolagailua">
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Text layoutX="51.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DENDA" textAlignment="CENTER" wrappingWidth="116.615234375">
-         <font>
-            <Font size="30.0" />
-         </font>
-      </Text>
-      <Button layoutX="452.0" layoutY="128.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="104.0" text="EROSI" />
-      <Button layoutX="452.0" layoutY="294.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="104.0" text="EROSI" />
-      <Button layoutX="452.0" layoutY="237.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="104.0" text="EROSI" />
-      <Button layoutX="452.0" layoutY="184.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="104.0" text="EROSI" />
-      <MenuButton layoutX="196.0" layoutY="131.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Kantitatea">
-        <items>
-          <MenuItem mnemonicParsing="false" text="Kantitate 1" />
-          <MenuItem mnemonicParsing="false" text="Kantitate 2" />
-            <MenuItem mnemonicParsing="false" text="Kantitate 3" />
-            <MenuItem mnemonicParsing="false" text="Kantitate 4" />
-            <MenuItem mnemonicParsing="false" text="Kantitate 5" />
-        </items>
-      </MenuButton>
-      <MenuButton layoutX="196.0" layoutY="188.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Kantitatea">
-         <items>
-            <MenuItem mnemonicParsing="false" text="Kantitate 1" />
-            <MenuItem mnemonicParsing="false" text="Kantitate 2" />
-            <MenuItem mnemonicParsing="false" text="Kantitate 3" />
-            <MenuItem mnemonicParsing="false" text="Kantitate 4" />
-            <MenuItem mnemonicParsing="false" text="Kantitate 5" />
-         </items>
-      </MenuButton>
-      <Text layoutX="66.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPU">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Text>
-      <Text layoutX="67.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STORAGE">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Text>
-      <Text layoutX="66.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MOTHERBOARD">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Text>
-      <Text layoutX="66.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VIDEO CARD" wrappingWidth="116.615234375">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Text>
-      <MenuButton layoutX="196.0" layoutY="241.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Kantitatea">
-         <items>
-            <MenuItem mnemonicParsing="false" text="Kantitate 1" />
-            <MenuItem mnemonicParsing="false" text="Kantitate 2" />
-            <MenuItem mnemonicParsing="false" text="Kantitate 3" />
-            <MenuItem mnemonicParsing="false" text="Kantitate 4" />
-            <MenuItem mnemonicParsing="false" text="Kantitate 5" />
-         </items>
-      </MenuButton>
-      <MenuButton layoutX="196.0" layoutY="298.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Kantitatea">
-         <items>
-            <MenuItem mnemonicParsing="false" text="Kantitate 1" />
-            <MenuItem mnemonicParsing="false" text="Kantitate 2" />
-            <MenuItem mnemonicParsing="false" text="Kantitate 3" />
-            <MenuItem mnemonicParsing="false" text="Kantitate 4" />
-            <MenuItem mnemonicParsing="false" text="Kantitate 5" />
-         </items>
-      </MenuButton>
-      <MenuButton layoutX="326.0" layoutY="132.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Marka">
-         <items>
-            <MenuItem mnemonicParsing="false" text="G.Skill Ripjaws V Series" />
-            <MenuItem mnemonicParsing="false" text="Intel Xeon E5-2697 V4" />
-            <MenuItem mnemonicParsing="false" text="G.Skill Ripjaws V Series" />
-            <MenuItem mnemonicParsing="false" text="Intel Xeon E5-1650 V4" />
-            <MenuItem mnemonicParsing="false" text="Crucial" />
-         </items>
-      </MenuButton>
-      <MenuButton layoutX="326.0" layoutY="188.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Marka">
-         <items>
-            <MenuItem mnemonicParsing="false" text="PNY VCQK6000-PB" />
-            <MenuItem mnemonicParsing="false" text="Hitachi HUA723020ALA640" />
-            <MenuItem mnemonicParsing="false" text="Intel DP35DPM" />
-            <MenuItem mnemonicParsing="false" text="Intel DP35DPM" />
-            <MenuItem mnemonicParsing="false" text="MSI GAMING" />
-         </items>
-      </MenuButton>
-      <MenuButton layoutX="326.0" layoutY="241.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Marka">
-         <items>
-            <MenuItem mnemonicParsing="false" text="G.Skill Trident Z" />
-            <MenuItem mnemonicParsing="false" text="Intel Xeon E5-2640 V3" />
-            <MenuItem mnemonicParsing="false" text="G.Skill Ripjaws V Series" />
-            <MenuItem mnemonicParsing="false" text="G.Skill Trident Z" />
-            <MenuItem mnemonicParsing="false" text="G.Skill Ripjaws V Series" />
-         </items>
-      </MenuButton>
-      <MenuButton layoutX="326.0" layoutY="298.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="87.0" text="Marka">
-         <items>
-            <MenuItem mnemonicParsing="false" text="EVGA 11G-P4-6598-KR" />
-            <MenuItem mnemonicParsing="false" text="Western Digital WDS256G1X0C" />
-            <MenuItem mnemonicParsing="false" text="Seagate ST1000DX002" />
-            <MenuItem mnemonicParsing="false" text="EVGA 11G-P4-6696-KR" />
-            <MenuItem mnemonicParsing="false" text="SanDisk SDSSDHII-480G-G25" />
-         </items>
-      </MenuButton>
-   </children>
-</Pane>
+    <Text text="DENDA" strokeType="OUTSIDE" strokeWidth="0.0" fill="#2c3e50">
+        <font><Font name="System Bold" size="20.0"/></font>
+    </Text>
+
+    <Separator/>
+
+    <Label text="Produktuak:" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+    <TableView fx:id="produktuakTable" prefHeight="220.0" prefWidth="750.0">
+        <columns>
+            <TableColumn fx:id="izenaColumn" text="PRODUKTUA" prefWidth="370"/>
+            <TableColumn fx:id="stockColumn" text="STOCK" prefWidth="100"/>
+            <TableColumn fx:id="prezioaColumn" text="PREZIOA (€)" prefWidth="120"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Kantitatea:" style="-fx-font-weight: bold;"/>
+        <Spinner fx:id="kantitateaSpinner" prefWidth="80"/>
+        <Button text="GEHITU ORGATXORA"
+                style="-fx-background-color: #3498db; -fx-text-fill: white;
+                       -fx-font-weight: bold; -fx-background-radius: 5;"
+                onAction="#gehituKarritora"/>
+    </HBox>
+
+    <Separator/>
+
+    <Label text="Orgatxoa:" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+    <TableView fx:id="karritoTable" prefHeight="130.0" prefWidth="750.0">
+        <columns>
+            <TableColumn fx:id="karritoProduktuColumn" text="PRODUKTUA" prefWidth="370"/>
+            <TableColumn fx:id="karritoKantitateaColumn" text="KANTITATEA" prefWidth="100"/>
+            <TableColumn fx:id="karritoPrezioanColumn" text="PREZIOA (€)" prefWidth="120"/>
+            <TableColumn fx:id="karritoTotalaColumn" text="TOTALA (€)" prefWidth="120"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="20" alignment="CENTER_RIGHT">
+        <Label fx:id="totalLabel" text="TOTALA: 0.00 €"
+               style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #2c3e50;"/>
+        <Button text="ORGATXOA GARBITU"
+                style="-fx-background-color: #e74c3c; -fx-text-fill: white;
+                       -fx-font-weight: bold; -fx-background-radius: 5;"
+                onAction="#garbituKarritoa"/>
+        <Button text="ORDAINDU"
+                style="-fx-background-color: #27ae60; -fx-text-fill: white;
+                       -fx-font-weight: bold; -fx-background-radius: 5;"
+                onAction="#ordaindu"/>
+        <Button text="ITZULI"
+                style="-fx-background-color: #f39c12; -fx-text-fill: white;
+                       -fx-font-weight: bold; -fx-background-radius: 5;"
+                onAction="#itzuli"/>
+    </HBox>
+
+</VBox>

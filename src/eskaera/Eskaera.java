@@ -1,22 +1,22 @@
-package inbentarioa;
+package eskaera;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class Inbentarioa extends Application {
+public class Eskaera extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Inbentario.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Eskaerak.fxml"));
         Scene scene = new Scene(loader.load());
         
-        InbentarioaKontrolagailua controller = loader.getController();
+        EskaeraKontrolagailua controller = loader.getController();
         controller.setStage(stage);
 
         stage.setScene(scene);
-        stage.setTitle("Inbentarioa");
+        stage.setTitle("Eskaerak");
         stage.show();
     }
 

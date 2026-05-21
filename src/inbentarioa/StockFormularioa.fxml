@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="15" xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="inbentarioa.StockFormularioaKontrolagailua">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="STOCK GEHITU" style="-fx-font-weight: bold;">
+        <font><Font size="16"/></font>
+    </Label>
+
+    <Separator/>
+
+    <GridPane hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints minWidth="100" prefWidth="120"/>
+            <ColumnConstraints minWidth="200" prefWidth="250"/>
+        </columnConstraints>
+
+        <Label text="PRODUKTUA:" GridPane.columnIndex="0" GridPane.rowIndex="0"
+               style="-fx-font-weight: bold;"/>
+        <Label fx:id="produktuaLabel" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="STOCK ORAIN:" GridPane.columnIndex="0" GridPane.rowIndex="1"
+               style="-fx-font-weight: bold;"/>
+        <Label fx:id="stockOraLabel" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="GEHITU:" GridPane.columnIndex="0" GridPane.rowIndex="2"
+               style="-fx-font-weight: bold;"/>
+        <TextField fx:id="stockField" GridPane.columnIndex="1" GridPane.rowIndex="2"
+                   promptText="Ej: 10"/>
+    </GridPane>
+
+    <Separator/>
+
+    <HBox alignment="CENTER" spacing="20">
+        <Button text="GORDE" onAction="#gorde"
+                style="-fx-background-color: #2e7d32; -fx-text-fill: white;
+                       -fx-font-weight: bold; -fx-cursor: hand;"/>
+        <Button text="UTZI" onAction="#utzi"
+                style="-fx-background-color: #c62828; -fx-text-fill: white;
+                       -fx-cursor: hand;"/>
+    </HBox>
+
+</VBox>

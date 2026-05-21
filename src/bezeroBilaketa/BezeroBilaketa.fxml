@@ -5,8 +5,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bezeroBilaketa.BezeroKontrolagailua">
    <children>
       <Text layoutX="-12.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BEZEROEN BILAKETA" textAlignment="CENTER" wrappingWidth="243.13671875">
          <font>
@@ -18,55 +17,46 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Text>
-      <TextField layoutX="25.0" layoutY="87.0" prefHeight="25.0" prefWidth="216.0" promptText="Bilatu bezeroa (ID,Izena...) 🔍" />
-      <MenuButton layoutX="251.0" layoutY="87.0" mnemonicParsing="false" text="Egoera">
+      <TextField fx:id="bilatuTextField" layoutX="25.0" layoutY="87.0" prefHeight="25.0" prefWidth="216.0" promptText="Bilatu bezeroa (ID, Izena, Abizena...)" />
+      <MenuButton fx:id="egoeraMenuButton" layoutX="251.0" layoutY="87.0" mnemonicParsing="false" text="Egoera">
          <items>
             <MenuItem mnemonicParsing="false" text="Aktiboa" />
             <MenuItem mnemonicParsing="false" text="Inaktiboa" />
             <MenuItem mnemonicParsing="false" text="Denak" />
          </items>
       </MenuButton>
-      <Button layoutX="326.0" layoutY="87.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #5c88d6;" text="BILATU" />
+      <Button fx:id="bilatuButton" layoutX="326.0" layoutY="87.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #5c88d6;" text="BILATU" />
       <Text layoutX="25.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BILAKETA-EMAITZAK:" textAlignment="CENTER" wrappingWidth="169.13671875">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Text>
-      <Button layoutX="408.0" layoutY="87.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" text="GARBITU" />
-      <TableView layoutX="25.0" layoutY="183.0" prefHeight="196.0" prefWidth="548.0">
+      <Button fx:id="garbituButton" layoutX="408.0" layoutY="87.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" text="GARBITU" />
+      <TableView fx:id="tableView" layoutX="25.0" layoutY="183.0" prefHeight="196.0" prefWidth="600.0">
          <columns>
-            <TableColumn prefWidth="75.0" text="ID" />
-            <TableColumn prefWidth="125.0" text="IZENA" />
-            <TableColumn prefWidth="125.0" text="NAN" />
-            <TableColumn prefWidth="87.0" text="EGOERA" />
-            <TableColumn prefWidth="135.0" text="SORRERA DATA" />
+            <TableColumn fx:id="idColumn" prefWidth="60.0" text="ID" />
+            <TableColumn fx:id="izenaAbizenaColumn" prefWidth="180.0" text="IZENA ETA ABIZENA" />
+            <TableColumn fx:id="nanColumn" prefWidth="100.0" text="NAN" />
+            <TableColumn fx:id="egoeraColumn" prefWidth="90.0" text="EGOERA" />
+            <TableColumn fx:id="sorreraDataColumn" prefWidth="165.0" text="SORRERA DATA" />
          </columns>
       </TableView>
-      <MenuBar layoutX="233.0" layoutY="17.0" prefHeight="25.0" prefWidth="350.0">
+      <Button fx:id="itzuliButton" layoutX="484.0" layoutY="87.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" text="ITZULI" />
+      <MenuBar layoutX="380.0" layoutY="17.0" prefHeight="25.0" prefWidth="250.0">
          <menus>
-            <Menu mnemonicParsing="false" text="B.Kudeaketa">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Bezero bilatu" />
-               </items>
-            </Menu>
             <Menu mnemonicParsing="false" text="Eskaerak">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Bezero Eskaerak" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Agenda">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Formularioa" />
+                  <MenuItem fx:id="bezeroEskaerakMenuItem" mnemonicParsing="false" text="Bezero Eskaerak" />
                </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Inbentarioa">
                <items>
-                  <MenuItem mnemonicParsing="false" text="I.Lista" />
+                  <MenuItem fx:id="iListaMenuItem" mnemonicParsing="false" text="I.Lista" />
                </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Kontua">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Saioa Itxi" />
+                  <MenuItem fx:id="saioaItxiMenuItem" mnemonicParsing="false" text="Saioa Itxi" />
                </items>
             </Menu>
          </menus>

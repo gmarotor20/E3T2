@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="15" xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="inbentarioa.ProduktuFormularioaKontrolagailua">
+    
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    
+    <Label text="PRODUKTU BERRIA" style="-fx-font-weight: bold;">
+        <font>
+            <Font size="16"/>
+        </font>
+    </Label>
+    
+    <Separator/>
+    
+    <GridPane hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints minWidth="100" prefWidth="120"/>
+            <ColumnConstraints minWidth="200" prefWidth="250"/>
+        </columnConstraints>
+        
+        <Label text="IZENA:" GridPane.columnIndex="0" GridPane.rowIndex="0" style="-fx-font-weight: bold;"/>
+        <TextField fx:id="izenaField" GridPane.columnIndex="1" GridPane.rowIndex="0" promptText="Ej: G.Skill Ripjaws V Series"/>
+        
+        <Label text="STOCK:" GridPane.columnIndex="0" GridPane.rowIndex="1" style="-fx-font-weight: bold;"/>
+        <TextField fx:id="stockField" GridPane.columnIndex="1" GridPane.rowIndex="1" promptText="Ej: 15"/>
+        
+        <Label text="PREZIOA:" GridPane.columnIndex="0" GridPane.rowIndex="2" style="-fx-font-weight: bold;"/>
+        <TextField fx:id="prezioaField" GridPane.columnIndex="1" GridPane.rowIndex="2" promptText="Ej: 589.99"/>
+    </GridPane>
+    
+    <Separator/>
+    
+    <HBox alignment="CENTER" spacing="20">
+        <Button fx:id="gordeButton" text="GORDE" onAction="#gorde" 
+                style="-fx-background-color: #2e7d32; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;"/>
+        <Button fx:id="utziButton" text="UTZI" onAction="#utzi" 
+                style="-fx-background-color: #c62828; -fx-text-fill: white; -fx-cursor: hand;"/>
+    </HBox>
+    
+</VBox>

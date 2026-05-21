@@ -1,4 +1,5 @@
 package login;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -8,11 +9,11 @@ public class Login extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Aplikazioa.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Login.fxml"));
         Scene scene = new Scene(loader.load());
 
         stage.setScene(scene);
-        stage.setTitle("FXML + Controller demo");
+        stage.setTitle("Login");
         stage.show();
     }
 

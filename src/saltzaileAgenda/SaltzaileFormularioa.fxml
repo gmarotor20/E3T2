@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="15" xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="saltzaileAgenda.SaltzaileFormularioaKontrolagailua">
+    
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    
+    <Label text="GEHITU SALTZAILE BERRIA" style="-fx-font-weight: bold;">
+        <font>
+            <Font size="16"/>
+        </font>
+    </Label>
+    
+    <Separator/>
+    
+    <GridPane hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints minWidth="100" prefWidth="120"/>
+            <ColumnConstraints minWidth="200" prefWidth="250"/>
+        </columnConstraints>
+        
+        <Label text="ERABILTZAILEA:" GridPane.columnIndex="0" GridPane.rowIndex="0" style="-fx-font-weight: bold;"/>
+        <TextField fx:id="erabiltzaileaField" GridPane.columnIndex="1" GridPane.rowIndex="0" promptText="ej: pjordan"/>
+        
+        <Label text="SARRERA:" GridPane.columnIndex="0" GridPane.rowIndex="1" style="-fx-font-weight: bold;"/>
+        <DatePicker fx:id="sarreraDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        
+        <Label text="IRTEERA:" GridPane.columnIndex="0" GridPane.rowIndex="2" style="-fx-font-weight: bold;"/>
+        <DatePicker fx:id="irteeraDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        
+        <Label text="ALDAKETAK:" GridPane.columnIndex="0" GridPane.rowIndex="3" style="-fx-font-weight: bold;"/>
+        <TextArea fx:id="aldaketakArea" GridPane.columnIndex="1" GridPane.rowIndex="3" prefHeight="80" promptText="Hasierako kontratazioa..."/>
+    </GridPane>
+    
+    <Separator/>
+    
+    <HBox alignment="CENTER" spacing="20">
+        <Button fx:id="gordeButton" text="GORDE" onAction="#gorde" 
+                style="-fx-background-color: #2e7d32; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;"/>
+        <Button fx:id="utziButton" text="UTZI" onAction="#utzi" 
+                style="-fx-background-color: #c62828; -fx-text-fill: white; -fx-cursor: hand;"/>
+    </HBox>
+    
+</VBox>

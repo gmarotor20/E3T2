@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="20"
+      xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="bezeroArreta.BezeroArretaKontrolagailua">
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20"/>
+    </padding>
+
+    <Label text="BEZERO ARRETA"
+           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+    <Separator/>
+
+    <VBox spacing="10" style="-fx-border-color: #3498db; -fx-border-width: 2;
+                               -fx-border-radius: 10; -fx-padding: 15; -fx-background-radius: 10;">
+        <Label text="Posta elektronikoa:" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+        <Label text="soporte@denda.com"/>
+        <Label text="Telefonoa:" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+        <Label text="+34 900 123 456"/>
+        <Label text="Ordutegia:" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+        <Label text="Astelehenetik Ostiralera: 9:00 - 18:00"/>
+    </VBox>
+
+    <Accordion>
+        <panes>
+            <TitledPane text="❓ Nola egin dezaket eskaera bat?">
+                <VBox spacing="10">
+                    <Label>Eskaera bat egin dezakezu "Denda" ataletik.</Label>
+                </VBox>
+            </TitledPane>
+            <TitledPane text="❓ Zenbat denbora behar du bidalketak?">
+                <VBox spacing="10">
+                    <Label>Bidalketa denbora 3-5 egun balioduna da.</Label>
+                </VBox>
+            </TitledPane>
+            <TitledPane text="❓ Nola itzul dezaket produktu bat?">
+                <VBox spacing="10">
+                    <Label>14 egun natural dituzu itzultzeko.</Label>
+                </VBox>
+            </TitledPane>
+            <TitledPane text="❓ Zein ordainketa metodo onartzen dituzue?">
+                <VBox spacing="10">
+                    <Label>Kreditu txartela, PayPal eta transferentzia bankarioa.</Label>
+                </VBox>
+            </TitledPane>
+        </panes>
+    </Accordion>
+
+    <VBox spacing="10" style="-fx-border-color: #95a5a6; -fx-border-width: 1;
+                               -fx-border-radius: 10; -fx-padding: 15;">
+        <Label text="Bidali mezua:" style="-fx-font-weight: bold; -fx-font-size: 16px;"/>
+
+        <!-- ← COMBOBOX MOTIVO NUEVO -->
+        <Label text="Motiboa:" style="-fx-font-weight: bold;"/>
+        <ComboBox fx:id="motiboarenComboBox" prefWidth="200"
+                  promptText="Hautatu motiboa..."/>
+
+        <Label text="Mezua:" style="-fx-font-weight: bold;"/>
+        <TextArea fx:id="mezuaArea" promptText="Idatzi zure mezua hemen..."
+                  prefHeight="100"/>
+
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <Button text="BIDALI MEZUA" onAction="#bidaliMezua"
+                    style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;"/>
+            <Button text="ITZULI" onAction="#itzuliMenuBezeroa"
+                    style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        </HBox>
+    </VBox>
+
+</VBox>
