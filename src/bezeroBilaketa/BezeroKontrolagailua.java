@@ -166,7 +166,6 @@ public class BezeroKontrolagailua implements Initializable {
 			}
 
 			tableView.setItems(bezeroakList);
-			System.out.println("Bezeroak kargatuta: " + bezeroakList.size());
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -213,7 +212,6 @@ public class BezeroKontrolagailua implements Initializable {
 			}
 
 			tableView.setItems(bezeroakList);
-			System.out.println("Bilaketaren emaitza: " + bezeroakList.size() + " bezero");
 
 		} catch (SQLException e) {
 			e.printStackTrace();

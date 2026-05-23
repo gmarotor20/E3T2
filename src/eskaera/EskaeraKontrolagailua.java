@@ -129,7 +129,6 @@ public class EskaeraKontrolagailua implements Initializable {
 			}
 
 			tableView.setItems(erosketakList);
-			System.out.println("Erosketak kargatuta: " + erosketakList.size());
 
 		} catch (SQLException e) {
 			e.printStackTrace();

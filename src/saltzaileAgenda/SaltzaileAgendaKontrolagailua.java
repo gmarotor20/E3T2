@@ -119,7 +119,6 @@ public class SaltzaileAgendaKontrolagailua implements Initializable {
 			}
 
 			tableView.setItems(saltzaileakList);
-			System.out.println("Saltzaileak kargatuta: " + saltzaileakList.size());
 
 		} catch (SQLException e) {
 			e.printStackTrace();

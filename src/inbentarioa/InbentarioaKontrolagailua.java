@@ -122,8 +122,6 @@ public class InbentarioaKontrolagailua implements Initializable {
 				produktuakList.add(produktua);
 			}
 
-			System.out.println("Datuak kargatuta: " + produktuakList.size() + " produktu");
-
 		} catch (SQLException e) {
 			e.printStackTrace();
 			erakutsiAlert("Errorea", "Datuak kargatzerakoan errorea: " + e.getMessage());
