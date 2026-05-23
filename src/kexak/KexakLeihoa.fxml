@@ -34,17 +34,22 @@
         <Label text="Data:" GridPane.columnIndex="0" GridPane.rowIndex="3" style="-fx-font-weight: bold;"/>
         <Label fx:id="dataLabel" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
 
-        <Label text="Mezua:" GridPane.columnIndex="0" GridPane.rowIndex="4" style="-fx-font-weight: bold;"/>
+        <Label text="Egoera:" GridPane.columnIndex="0" GridPane.rowIndex="4" style="-fx-font-weight: bold;"/>
+        <Label fx:id="egoeraLabel" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+        <Label text="Mezua:" GridPane.columnIndex="0" GridPane.rowIndex="5" style="-fx-font-weight: bold;"/>
     </GridPane>
 
-    <TextArea fx:id="mezuaArea" editable="false" wrapText="true" prefHeight="150" 
+    <TextArea fx:id="mezuaArea" editable="false" wrapText="true" prefHeight="150"
               style="-fx-background-color: white; -fx-font-size: 13px;"/>
 
     <Separator/>
 
     <HBox alignment="CENTER">
         <Button fx:id="itxiButton" text="ITXI" onAction="#itxi"
-                style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 8 20;"/>
+                style="-fx-background-color: #f39c12; -fx-text-fill: white;
+                       -fx-font-weight: bold; -fx-background-radius: 5;
+                       -fx-padding: 8 20;"/>
     </HBox>
 
 </VBox>

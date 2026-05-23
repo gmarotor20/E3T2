@@ -27,6 +27,9 @@ public class KexaBean {
 	/** Kexa egin zen data eta ordua. */
 	private String data;
 
+	/** Kexaren egoera (IRAKURRI_GABE / IRAKURRITA). */
+	private String egoera;
+
 	/**
 	 * KexaBean-en konstruktorea eremu guztiekin.
 	 *
@@ -36,14 +39,16 @@ public class KexaBean {
 	 * @param motiboa kexaren motiboa.
 	 * @param mezua   kexaren mezua.
 	 * @param data    kexaren data eta ordua.
+	 * @param egoera  kexaren egoera.
 	 */
-	public KexaBean(int id, String bezeroa, String emaila, String motiboa, String mezua, String data) {
+	public KexaBean(int id, String bezeroa, String emaila, String motiboa, String mezua, String data, String egoera) {
 		this.id = id;
 		this.bezeroa = bezeroa;
 		this.emaila = emaila;
 		this.motiboa = motiboa;
 		this.mezua = mezua;
 		this.data = data;
+		this.egoera = egoera;
 	}
 
 	/**
@@ -98,5 +103,14 @@ public class KexaBean {
 	 */
 	public String getData() {
 		return data;
+	}
+
+	/**
+	 * Kexaren egoera lortzen du.
+	 *
+	 * @return kexaren egoera.
+	 */
+	public String getEgoera() {
+		return egoera;
 	}
 }

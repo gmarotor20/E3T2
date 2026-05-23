@@ -15,14 +15,15 @@
 
     <Separator/>
 
-    <TableView fx:id="tableView" prefHeight="400.0" prefWidth="900.0">
+    <TableView fx:id="tableView" prefHeight="400.0" prefWidth="950.0">
         <columns>
             <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>
             <TableColumn fx:id="bezeroaColumn" text="Bezeroa" prefWidth="150"/>
-            <TableColumn fx:id="emailaColumn" text="Emaila" prefWidth="180"/>
+            <TableColumn fx:id="emailaColumn" text="Emaila" prefWidth="160"/>
             <TableColumn fx:id="motiboarenColumn" text="Motiboa" prefWidth="100"/>
-            <TableColumn fx:id="mezuaColumn" text="Mezua" prefWidth="250"/>
+            <TableColumn fx:id="mezuaColumn" text="Mezua" prefWidth="240"/>
             <TableColumn fx:id="dataColumn" text="Data" prefWidth="150"/>
+            <TableColumn fx:id="egoeraColumn" text="Egoera" prefWidth="90"/>
         </columns>
     </TableView>
 

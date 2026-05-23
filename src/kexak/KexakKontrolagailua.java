@@ -20,7 +20,9 @@ import java.util.ResourceBundle;
 /**
  * Bezeroen kexen leihoaren kontrolagailua. KEXAK_ATERA stored procedure-a
  * erabiliz jasotako kexa guztiak erakusten ditu. Saltzaileak klik bikoitzaren
- * bidez kexa bakoitzaren xehetasunak ikustea ahalbidetzen du.
+ * bidez kexa bakoitzaren xehetasunak ikustea ahalbidetzen du. Kexa bat
+ * irekitzean KEXA_IRAKURRI procedure-a deitzen du kexa IRAKURRITA gisa
+ * markatzeko.
  *
  * @author E3T2
  * @version 1.0
@@ -54,6 +56,10 @@ public class KexakKontrolagailua implements Initializable {
 	/** Kexaren data eta orduaren zutabea. */
 	@FXML
 	private TableColumn<KexaBean, String> dataColumn;
+
+	/** Kexaren egoeraren zutabea (IRAKURRI_GABE / IRAKURRITA). */
+	@FXML
+	private TableColumn<KexaBean, String> egoeraColumn;
 
 	/** Saltzailearen menura itzultzeko botoia. */
 	@FXML
@@ -89,6 +95,7 @@ public class KexakKontrolagailua implements Initializable {
 		motiboarenColumn.setCellValueFactory(new PropertyValueFactory<>("motiboa"));
 		mezuaColumn.setCellValueFactory(new PropertyValueFactory<>("mezua"));
 		dataColumn.setCellValueFactory(new PropertyValueFactory<>("data"));
+		egoeraColumn.setCellValueFactory(new PropertyValueFactory<>("egoera"));
 
 		itzuliButton.setOnAction(e -> itzuli());
 
@@ -109,7 +116,8 @@ public class KexakKontrolagailua implements Initializable {
 
 	/**
 	 * Datu-basetik kexa guztiak kargatzen ditu KEXAK_ATERA stored procedure-a
-	 * erabiliz.
+	 * erabiliz. Procedure-ak kurtsorea erabiliz NULL egoera duten kexak
+	 * IRAKURRI_GABE gisa inicializatzen ditu.
 	 */
 	private void kargatuKexak() {
 		DatuBasea db = new DatuBasea();
@@ -122,7 +130,7 @@ public class KexakKontrolagailua implements Initializable {
 
 			while (rs.next()) {
 				KexaBean kexa = new KexaBean(rs.getInt("ID"), rs.getString("BEZEROA"), rs.getString("EMAILA"),
-						rs.getString("MOTIBOA"), rs.getString("MEZUA"), rs.getString("DATA"));
+						rs.getString("MOTIBOA"), rs.getString("MEZUA"), rs.getString("DATA"), rs.getString("EGOERA"));
 				kexakList.add(kexa);
 			}
 
@@ -140,6 +148,7 @@ public class KexakKontrolagailua implements Initializable {
 
 	/**
 	 * Hautatutako kexaren xehetasun osoak dituen leiho modal bat irekitzen du.
+	 * Modal itxi ondoren kexa IRAKURRITA gisa markatzen du eta taula freskatzen du.
 	 *
 	 * @param kexa taulan hautatutako kexa.
 	 */
@@ -161,6 +170,10 @@ public class KexakKontrolagailua implements Initializable {
 			controller.setModalStage(modalStage);
 			modalStage.showAndWait();
 
+			// Modal itxi ondoren kexa IRAKURRITA gisa markatu eta taula freskatu
+			markatuIrakurrita(kexa.getId());
+			kargatuKexak();
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -168,6 +181,25 @@ public class KexakKontrolagailua implements Initializable {
 			alert.setHeaderText(null);
 			alert.setContentText("Ezin izan da kexaren leihoa ireki: " + e.getMessage());
 			alert.showAndWait();
+		}
+	}
+
+	/**
+	 * Kexa bat IRAKURRITA gisa markatzen du KEXA_IRAKURRI procedure-a erabiliz.
+	 *
+	 * @param id markatu beharreko kexaren identifikatzailea.
+	 */
+	private void markatuIrakurrita(int id) {
+		DatuBasea db = new DatuBasea();
+
+		try (Connection conn = db.konektoreaWorld();
+				CallableStatement cstmt = conn.prepareCall("{CALL KEXA_IRAKURRI(?)}")) {
+
+			cstmt.setInt(1, id);
+			cstmt.execute();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 	}
 

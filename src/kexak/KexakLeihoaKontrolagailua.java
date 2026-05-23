@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 
 /**
  * Kexaren xehetasunen leiho modalaren kontrolagailua. Hautatutako kexaren datu
- * guztiak erakusten ditu: bezeroa, emaila, motiboa, data eta mezua.
+ * guztiak erakusten ditu: bezeroa, emaila, motiboa, data, egoera eta mezua.
  *
  * @author E3T2
  * @version 1.0
@@ -31,6 +31,10 @@ public class KexakLeihoaKontrolagailua {
 	@FXML
 	private Label dataLabel;
 
+	/** Kexaren egoera erakusten duen etiketa. */
+	@FXML
+	private Label egoeraLabel;
+
 	/** Kexaren mezua erakusten duen testu-eremua. */
 	@FXML
 	private TextArea mezuaArea;
@@ -52,6 +56,7 @@ public class KexakLeihoaKontrolagailua {
 		emailaLabel.setText(kexa.getEmaila());
 		motiboaLabel.setText(kexa.getMotiboa());
 		dataLabel.setText(kexa.getData());
+		egoeraLabel.setText(kexa.getEgoera());
 		mezuaArea.setText(kexa.getMezua());
 	}
 
